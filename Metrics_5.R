@@ -151,8 +151,8 @@ for (i in 1:500){
   # Generate the observations for early adopters
   early_ur <- matrix(NA, nrow=15, ncol=31)
   early_ur[, 1:11] <- 5 + rnorm(15*1, mean=0, sd=1)
-  for (i in 11:31) {
-    early_ur[, i] <- 5 + 2.5 * (i-10) + rnorm(15*1, mean=0, sd=1)
+  for (a in 11:31) {
+    early_ur[, a] <- 5 + 2.5 * (i-10) + rnorm(15*1, mean=0, sd=1)
   }
   early_ur_vector <- c(t(early_ur))
   early_status_each <- c(rep(0, 10), rep(1, 21))
@@ -162,8 +162,8 @@ for (i in 1:500){
   # Generate the observations for late adopters
   late_ur <- matrix(NA, nrow=15, ncol=31)
   late_ur[, 1:25] <- 5 + rnorm(15*1, mean=0, sd=1)
-  for (i in 26:31) {
-    late_ur[, i] <- 5 + 2.5 * (i-25) + rnorm(15*1, mean=0, sd=1)
+  for (b in 26:31) {
+    late_ur[, b] <- 5 + 2.5 * (i-25) + rnorm(15*1, mean=0, sd=1)
   }
   late_ur_vector <- c(t(late_ur))
   late_status_each <- c(rep(0, 25), rep(1, 6))
